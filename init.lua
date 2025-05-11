@@ -234,6 +234,13 @@ vim.api.nvim_create_autocmd('LspAttach', {
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 -- These are just examples. Replace them with the language
 -- servers you have installed in your system.
-require('lspconfig').gleam.setup({})
-require('lspconfig').ocamllsp.setup({})
+-- require('lspconfig').gleam.setup({})
+-- require('lspconfig').ocamllsp.setup({})
+require('lspconfig').lua_ls.setup({})
+require('lspconfig').pyright.setup({})
+require('lspconfig').gopls.setup({})
+require('lspconfig').bashls.setup({
+  filetypes = { "sh", "zsh" },
+})
+require('lspconfig').rust_analyzer.setup({})
 
